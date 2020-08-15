@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WeatherViewController" customModule="Clima" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3Y-cT-2C3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud" translatesAutoresizingMaskIntoConstraints="NO" id="kWX-h1-VLT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wz9-jj-JbA">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tgv-vV-Mot">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqN-kS-Ypi">
+                                                <rect key="frame" x="0.0" y="0.5" width="40" height="39"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Gdg-gN-rvc"/>
+                                                    <constraint firstAttribute="height" constant="40" id="JLX-SP-jLB"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" backgroundImage="location.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="currentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZHp-MX-ijY"/>
+                                                </connections>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="right" clearsOnBeginEditing="YES" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="2eh-wL-W34">
+                                                <rect key="frame" x="50" y="0.0" width="274" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Cr-pd-dUW">
+                                                <rect key="frame" x="334" y="1" width="40" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="fiO-2W-UTJ"/>
+                                                    <constraint firstAttribute="width" constant="40" id="fn6-Kr-iSP"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
+                                                <connections>
+                                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXi-PQ-cWC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Haze" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWc-e8-cS8">
+                                        <rect key="frame" x="34" y="50" width="340" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="OG3-FF-01u"/>
+                                            <constraint firstAttribute="width" constant="340" id="VtP-cD-5pl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gx9-I8-UoC">
+                                        <rect key="frame" x="26.5" y="130" width="347.5" height="130"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" text="21.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9o-tW-03D" userLabel="Temperature Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="228" height="130"/>
+                                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="100"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="°" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7Y-Fj-S2q" userLabel="Temperature Label">
+                                                <rect key="frame" x="228" y="0.0" width="49" height="130"/>
+                                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="90"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="C" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHH-vY-Mrb" userLabel="Temperature Label">
+                                                <rect key="frame" x="277" y="0.0" width="70.5" height="130"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="100"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dhaka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CWP-r8-Jsy">
+                                        <rect key="frame" x="225" y="270" width="149" height="84.5"/>
+                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="70"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.81804566062176165" green="0.81804566062176165" blue="0.81804566062176165" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <size key="shadowOffset" width="6" height="0.0"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Qol-mf-mvQ">
+                                        <rect key="frame" x="165.5" y="364.5" width="208.5" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feels Like:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIb-UY-sPt">
+                                                <rect key="frame" x="0.0" y="0.0" width="98.5" height="55"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0W-Pz-so9">
+                                                <rect key="frame" x="103.5" y="0.0" width="47" height="55"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="41"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="4" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pP-4h-jmF">
+                                                <rect key="frame" x="155.5" y="0.0" width="26" height="55"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="43"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="2" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8G-Bq-3Ox">
+                                                <rect key="frame" x="186.5" y="0.0" width="22" height="55"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="43"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="3" height="2"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KRm-7U-7ao">
+                                        <rect key="frame" x="119.5" y="429.5" width="254.5" height="52.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind Speed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-ow-ay1">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="52.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6.2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R34-7J-Cth">
+                                                <rect key="frame" x="123" y="0.0" width="62" height="52.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="41"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="4" height="1"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="m/s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2F-No-Sgz">
+                                                <rect key="frame" x="190" y="0.0" width="64.5" height="52.5"/>
+                                                <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="33"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="3" height="2"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ti-bh-8Fw">
+                                        <rect key="frame" x="134" y="492" width="240" height="326"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Tgv-vV-Mot" secondAttribute="trailing" id="Xxe-YD-sFY"/>
+                                    <constraint firstItem="Tgv-vV-Mot" firstAttribute="leading" secondItem="Wz9-jj-JbA" secondAttribute="leading" id="zMA-9O-gQ7"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kWX-h1-VLT" secondAttribute="trailing" id="7Ax-G9-e3R"/>
+                            <constraint firstItem="kWX-h1-VLT" firstAttribute="leading" secondItem="g3Y-cT-2C3" secondAttribute="leading" id="H2N-Gj-59Y"/>
+                            <constraint firstItem="can-OR-uJU" firstAttribute="trailing" secondItem="Wz9-jj-JbA" secondAttribute="trailing" constant="20" id="LQB-Jw-U4O"/>
+                            <constraint firstAttribute="bottom" secondItem="kWX-h1-VLT" secondAttribute="bottom" id="Lre-TN-6aS"/>
+                            <constraint firstItem="Wz9-jj-JbA" firstAttribute="top" secondItem="can-OR-uJU" secondAttribute="top" id="ZPO-lJ-0zl"/>
+                            <constraint firstItem="kWX-h1-VLT" firstAttribute="top" secondItem="g3Y-cT-2C3" secondAttribute="top" id="pC7-h7-LYz"/>
+                            <constraint firstItem="Wz9-jj-JbA" firstAttribute="leading" secondItem="g3Y-cT-2C3" secondAttribute="leading" constant="20" id="t9u-zc-7Ub"/>
+                            <constraint firstItem="can-OR-uJU" firstAttribute="bottom" secondItem="Wz9-jj-JbA" secondAttribute="bottom" id="xZf-D7-jKn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="can-OR-uJU"/>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="kWX-h1-VLT" id="Bl7-t0-CSr"/>
+                        <outlet property="cityLabel" destination="CWP-r8-Jsy" id="8cQ-3l-ufV"/>
+                        <outlet property="feelsLikeTemp" destination="X0W-Pz-so9" id="qHB-Zh-0de"/>
+                        <outlet property="searchTextField" destination="2eh-wL-W34" id="F2N-Kl-glT"/>
+                        <outlet property="temperatureLabel" destination="w9o-tW-03D" id="mF4-vV-JxK"/>
+                        <outlet property="weatherDesc" destination="IWc-e8-cS8" id="ilz-61-Ysb"/>
+                        <outlet property="windSpeed" destination="R34-7J-Cth" id="xqg-lv-uTo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cloud" width="1125" height="2436"/>
+        <image name="location.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+    </resources>
+</document>
